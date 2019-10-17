@@ -1,0 +1,23 @@
+.jumbotron-fluid {
+
+    text-align: center;
+    font-family: 'Questrial', sans-serif;
+
+
+}
+
+.form-group {
+
+    margin: 50px 100px 50px 100px;
+    font-family: 'Questrial', sans-serif;
+    font-size: 20px;
+
+}
+
+.btn-primary {
+    margin: 20px 100px;
+    width: 100px;
+    font-family: 'Questrial', sans-serif;
+
+
+}
