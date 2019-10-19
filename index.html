@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,34 +8,45 @@
     <title>Guess the Number!</title>
     <link rel="stylesheet" type="text/css" href="Assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Questrial&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
 </head>
+
 <body>
 
-<div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid">
         <div class="container">
-          <h1 class="display-4">Number Guessing Game</h1>
-          <p class="lead">Pick a number between 1-20 and see if you get the number correct!</p>
+            <h1 class="display-4">Number Guessing Game</h1>
+            <p class="lead">Pick a number between 1-20 and see if you get the number correct!</p>
         </div>
-      </div>
+    </div>
 
-      <form>
+    <form>
 
-            <div class="form-group">
-              <label for="exampleInputEmail1">Your guess:</label>
-              <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-              <small id="emailHelp" class="form-text text-muted">Enter a number between 1-20.</small>
-            </div>
+        <div class="form-group">
+            <label for="inputNumber">Your guess:</label>
+            <input type="number" class="form-control" id="inputNumber" aria-describedby="numDescription">
+            <small id="numHelp" class="form-text text-muted">Enter a number between 1-20.</small>
+        </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+        <div id="button">
 
-          </form>
+            <button onclick="numCheck()">Submit</button>
+            
+        </div>
 
+    </form>
+    
+    <div> You guessed:
+            <span id="guess"></span>
+          </div>
+    <p id="demo"></p>
 
 
     <script type='text/javascript' src='Assets/javascript/game.js'></script>
 
 </body>
+
 </html>
