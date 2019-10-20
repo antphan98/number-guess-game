@@ -6,7 +6,7 @@ const numGuessGame = {
 
 
     numCheck: function () {
-        this.randomNumber = Math.floor(Math.random() * 20) + 1;
+        this.randomNumber = parseInt(Math.random() * 20) + 1;
 
     },
 
@@ -20,6 +20,7 @@ const numGuessGame = {
         //     this.turns--;
         // userGuess = parseInt(userGuess);
 
+    
         if (userGuess === this.randomNumber) {
             alert("correct! it took " + this.turns + " amount of times");
             // return true;
@@ -34,11 +35,13 @@ const numGuessGame = {
             this.turns--;
 
         }
+        if (this.turns === 0) {
+            alert("You ran out of turns");
+
+        }
 
 
         // }
-
-
 
     },
 
