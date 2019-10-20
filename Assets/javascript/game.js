@@ -1,62 +1,60 @@
 // let randomNumber = Math.floor(Math.random() * 20) + 1;
 const numGuessGame = {
 
-    randomNumber: Math.floor(Math.random() * 20) + 1,
+    randomNumber: 0,
     turns: 5,
 
-    
-    numCheck: function() {
-        document.getElementById("demo") = alert("hello");
-    
-      },
 
-      resetGame: function() {
+    numCheck: function () {
+        this.randomNumber = Math.floor(Math.random() * 20) + 1;
+
+    },
+
+    resetGame: function () {
         this.turns = 5;
-        this.randomNumber;
-      },
+        this.numCheck();
+    },
 
-        userGuessCheck: function(userGuess){
-        while (userGuess = parseInt(userGuess)) {
+    userGuessCheck: function (userGuess) {
+        // while (userGuess = parseInt(userGuess)) {
+        //     this.turns--;
+        // userGuess = parseInt(userGuess);
+
+        if (userGuess === this.randomNumber) {
+            alert("correct! it took " + this.turns + " amount of times");
+            // return true;
+        } else if (userGuess > this.randomNumber) {
+            alert("guess too high");
+            this.turns--;
+            // return false;
+
+        } else if (userGuess < this.randomNumber) {
+
+            alert("too low");
             this.turns--;
 
-            if (userGuess === this.randomNumber) {
-                alert("correct! it took " + this.turns + " amount of times");
-                return true;
-            }
-
-else if (guess > this.randomNumber) {
-    alert("guess too high");
-    this.turns--;
-    return false;
-
-}
-else {
-
-    alert("too low");
-    this.turns--;
-
-}
-
-
         }
+
+
+        // }
 
 
 
     },
 
-}
+};
 
 
 
 
 function userNum() {
-	const userGuess = document.getElementById("button").value;
+    const userGuess = document.getElementById("button").value;
     numGuessGame.userGuessCheck(userGuess);
-    
+
 }
 
 function reset() {
-    game.resetGame();
+    numGuessGame.resetGame();
 
 }
 
