@@ -10,7 +10,12 @@ const numGuessGame = {
     
       },
 
-    userGuessCheck: function(userGuess) {
+      resetGame: function() {
+        this.turns = 5;
+        this.randomNumber;
+      },
+
+        userGuessCheck: function(userGuess){
         while (userGuess = parseInt(userGuess)) {
             this.turns--;
 
@@ -18,6 +23,7 @@ const numGuessGame = {
                 alert("correct! it took " + this.turns + " amount of times");
                 return true;
             }
+
 else if (guess > this.randomNumber) {
     alert("guess too high");
     this.turns--;
@@ -36,11 +42,11 @@ else {
 
 
 
-    }
-
-      
+    },
 
 }
+
+
 
 
 function userNum() {
@@ -49,6 +55,12 @@ function userNum() {
     
 }
 
+function reset() {
+    game.resetGame();
+
+}
+
+reset();
 
 
 // document.getElementById("btn-primary").onclick = function() {
